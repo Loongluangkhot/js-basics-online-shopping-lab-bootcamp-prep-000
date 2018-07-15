@@ -18,7 +18,7 @@ function addToCart(item) {
  }
  var itemObject = {itemName: item, itemPrice: getRandomIntInclusive(1,100)}
  cart.push(itemObject)
- return ''
+ return `${item} has been added to your cart.`
 }
 
 function viewCart() {
