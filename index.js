@@ -28,9 +28,9 @@ function viewCart() {
   } else {
     var cartStr = ''
     for (var i = 0; i < cart.length; i++) {
-      cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, `
+      cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, and `
     }
-    cartStr = `In your cart, you have ${cartStr.slice(0, (cartStr.length - 2))}.`
+    cartStr = `In your cart, you have ${cartStr.slice(0, (cartStr.length - 6))}.`
     return cartStr
   }
 }
