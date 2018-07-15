@@ -26,7 +26,12 @@ function viewCart() {
   if (cart.length === 0) {
     return 'Your shopping cart is empty.'
   } else {
-    for (var i = 0; i < cart.length; )
+    var cartStr = ''
+    for (var i = 0; i < cart.length; i++) {
+      cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, `
+    }
+    cartStr = `In your cart, you have ${cartStr.slice(0, (cartStr.length - 2))}.`
+    return cartStr
   }
 }
 
