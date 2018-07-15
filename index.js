@@ -27,15 +27,20 @@ function viewCart() {
     return 'Your shopping cart is empty.'
   } else {
     var cartStr = ''
-    for (var i = 0; i < cart.length; i++) {
-      if (i === cart.length - 1) {
-        cartStr = `${cartStr}and ${cart[i]['itemName']} at \$${cart[i]['itemPrice']}.`
-      } else {
-        cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, `
+    
+    if (cart.length === 1) {
+      return `In your cart, you have ${cart[i]['itemName']} at \$${cart[i]['itemPrice']}.`
+    } else {
+      for (var i = 0; i < cart.length; i++) {
+        if (i === cart.length - 1) {
+          cartStr = `${cartStr}and ${cart[i]['itemName']} at \$${cart[i]['itemPrice']}.`
+        } else {
+          cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, `
+        }
       }
+      cartStr = `In your cart, you have ${cartStr}`
+      return cartStr
     }
-    cartStr = `In your cart, you have ${cartStr}`
-    return cartStr
   }
 }
 
