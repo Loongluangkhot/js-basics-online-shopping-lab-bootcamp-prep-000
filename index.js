@@ -28,9 +28,13 @@ function viewCart() {
   } else {
     var cartStr = ''
     for (var i = 0; i < cart.length; i++) {
-      cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, and `
+      if (i === cart.length - 1) {
+        cartStr = `${cartStr}and ${cart[i]['itemName']} at \$${cart[i]['itemPrice']}.`
+      } else {
+        cartStr = `${cartStr}${cart[i]['itemName']} at \$${cart[i]['itemPrice']}, `
+      }
     }
-    cartStr = `In your cart, you have ${cartStr.slice(0, (cartStr.length - 6))}.`
+    cartStr = `In your cart, you have ${cartStr}`
     return cartStr
   }
 }
