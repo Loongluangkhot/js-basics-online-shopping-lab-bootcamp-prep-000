@@ -29,7 +29,7 @@ function viewCart() {
     var cartStr = ''
     
     if (cart.length === 1) {
-      return `In your cart, you have ${cart[i]['itemName']} at \$${cart[i]['itemPrice']}.`
+      return `In your cart, you have ${cart[0]['itemName']} at \$${cart[0]['itemPrice']}.`
     } else {
       for (var i = 0; i < cart.length; i++) {
         if (i === cart.length - 1) {
