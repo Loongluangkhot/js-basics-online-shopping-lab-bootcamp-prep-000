@@ -17,7 +17,8 @@ function addToCart(item) {
    return Math.floor(Math.random() * (max - min + 1)) + min
  }
  var itemObject = {itemName: item, itemPrice: getRandomIntInclusive(1,100)}
- 
+ cart.push(itemObject)
+ return ''
 }
 
 function viewCart() {
