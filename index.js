@@ -11,7 +11,12 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
- var itemObject = {itemName: item, itemPrice:
+ function getRandomIntInclusive(min, max) {
+   min = Math.ceil(min)
+   max = Math.floor(max)
+   return Math.floor(Math.random() * (max - min + 1)) + min
+ }
+ var itemObject = {itemName: item, itemPrice: getRandomIntInclusive(1,100)
 }
 
 function viewCart() {
