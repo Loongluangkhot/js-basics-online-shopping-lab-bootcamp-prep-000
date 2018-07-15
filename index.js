@@ -55,9 +55,12 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var found = false
+  var removedItem
   for (var i = 0; i < cart.length; i++) {
     if (cart[i]['itemName'] === item) {
+      removedIndex = i
+      removedItem = cart.splice(i,1)
+    } else {
       
     }
   }
